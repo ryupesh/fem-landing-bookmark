@@ -1,0 +1,44 @@
+:root {
+    --clr-primary-300: hsl(231, 69%, 60%);
+    --clr-primary-800: hsl(229, 31%, 21%);
+    /* accent : red-500 */
+    --clr-neutral: hsl(0, 0%, 100%);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-custom {
+    @apply w-wrapper mx-auto px-8 py-12;
+}
+
+.btn {
+    @apply py-3 px-5 rounded-lg font-medium text-sm border-2 shadow-md
+}
+
+.open-header {
+    --clr-light: var(--clr-neutral);
+    --clr-dark: var(--clr-primary-800);
+    @apply bg-blue-800 fixed h-screen w-screen opacity-95
+}
+
+ul[data-tab-list] .active {
+    @apply after:absolute after:left-1/3 after:right-1/3 md:after:left-0 md:after:right-0 after:bottom-0 after:h-1 after:bg-red-500 after:rounded
+}
+
+.arrow-rotate-0 {
+    @apply after:rotate-0
+}
+
+.arrow-rotate-180 {
+    @apply after:rotate-180
+}
+
+div[data-accordion-panel]{
+    transition:max-height 400ms ease;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
