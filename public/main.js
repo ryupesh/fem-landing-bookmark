@@ -1,5 +1,6 @@
+const header = document.querySelector("header");
+
 const changeMobileMenu = function () {
-  const header = document.querySelector("header");
   const btnToggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav]");
 
@@ -21,3 +22,20 @@ const changeMobileMenu = function () {
 changeMobileMenu();
 switchTabs();
 switchAccordion();
+
+
+// sticky navbar
+window.addEventListener('scroll',()=>{
+  console.log();
+if(window.scrollY>=10){
+  header.classList.add('sticky');
+  header.classList.add('shadow-lg');
+  // header.nextElementSibling.classList.add('pt-28');
+
+}
+  else {
+    header.classList.remove('sticky');
+    header.classList.remove('shadow-lg');
+    // header.nextElementSibling.classList.remove('pt-28');
+  }
+});

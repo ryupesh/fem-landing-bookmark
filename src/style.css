@@ -10,7 +10,7 @@
 @tailwind utilities;
 
 .container-custom {
-    @apply w-wrapper mx-auto px-8 py-12;
+    @apply w-wrapper mx-auto px-8;
 }
 
 .btn {

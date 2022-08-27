@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -20,9 +20,9 @@
     <title>FEM | Bookmark Landing Page</title>
 </head>
 
-<body class="font-primary text-base overflow-x-hidden">
-    <header>
-        <div class="container container-custom h-full">
+<body class="font-primary text-base overflow-x-hidden" id="top">
+    <header class="top-0 bg-white z-10" id="header">
+        <div class="container container-custom h-full py-8">
             <div class="flex flex-col md:flex-row md:items-center justify-between h-full">
                 <div class="flex items-center justify-between w-full">
                     <a href="#" class="logo">
@@ -77,7 +77,7 @@
     <main>
         <!-- hero section -->
         <section>
-            <div class="container container-custom">
+            <div class="container container-custom py-12">
                 <div class="flex items-center gap-8 flex-col md:flex-row">
                     <div class="md:order-1 md:content-end">
                         <img src="img/illustration-hero.svg" alt="" />
@@ -107,7 +107,7 @@
 
         <!-- features section -->
         <section>
-            <div class="container container-custom">
+            <div class="container container-custom py-12">
                 <div class="text-center space-y-8">
                     <h2 class="text-3xl font-semibold">Features</h2>
                     <p class="text-slate-400 max-w-[45ch] mx-auto">
@@ -184,7 +184,7 @@
 
         <!-- extension section -->
         <section>
-            <div class="container container-custom text-center space-y-8">
+            <div class="container container-custom py-12 text-center space-y-8">
                 <h2 class="text-3xl font-semibold">Download the extension</h2>
                 <p class="text-slate-400 max-w-[45ch] mx-auto">
                     We’ve got more browsers in the pipeline. Please do let us know if
@@ -238,7 +238,7 @@
 
         <!-- faq section -->
         <section>
-            <div class="container container-custom space-y-8">
+            <div class="container container-custom py-12 space-y-8">
                 <div class="text-center space-y-8">
                     <h2 class="text-3xl font-semibold">Frequently Asked Questions</h2>
                     <p class="text-slate-400 max-w-[45ch] mx-auto">
@@ -319,7 +319,7 @@
 
         <!-- contact form section -->
         <section class="bg-blue-300">
-            <div class="container container-custom text-white text-center space-y-8 max-w-[50ch]">
+            <div class="container container-custom py-12 text-white text-center space-y-8 max-w-[50ch]">
                 <p class="uppercase tracking-wider">35,000+ already joined</p>
                 <h2 class="text-3xl font-semibold">
                     Stay up-to-date with what we’re doing
@@ -346,11 +346,15 @@
                 </form>
             </div>
         </section>
+
+        <!-- back to top button -->
+        <section>
+            <div class="fixed bottom-8 right-8"><a href="#top" class="block h-12 w-12 py-3 rounded-full bg-red-500 text-center text-white font-bold">TOP</a></div>
+        </section>
     </main>
 
     <footer class="bg-blue-800">
-        <div
-            class="container container-custom flex flex-col justify-center items-center gap-12 md:gap-0 md:flex-row md:justify-between">
+        <div class="container container-custom py-12 flex flex-col justify-center items-center gap-12 md:gap-0 md:flex-row md:justify-between">
             <a href="#">
                 <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
