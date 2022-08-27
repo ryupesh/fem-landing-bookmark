@@ -5,10 +5,12 @@ const changeMobileMenu = function () {
   const nav = document.querySelector("[data-nav]");
 
   btnToggle.addEventListener("click", () => {
-    header.classList.toggle("open-header");
-    nav.classList.toggle("hidden"); //Navigation links
-    nav.nextElementSibling.classList.toggle("hidden"); //Social icons
+    header.classList.toggle("open-header"); //Apply mobile menu styles to headder
+    nav.classList.toggle("hidden"); //Show Navigation links
+    nav.nextElementSibling.classList.toggle("hidden"); //Show Social icons
 
+
+    // Toggle between hamburger icon and close icon
     if (btnToggle.classList.contains("bg-menu")) {
       btnToggle.classList.remove("bg-menu");
       btnToggle.classList.add("bg-close");
