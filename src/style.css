@@ -41,9 +41,27 @@ div[data-accordion-panel]{
 .btn-contact{
     @apply bg-red-500 border-red-500 hover:bg-white hover:text-red-500 hover:border-red-500
 }
-.btn-contact.valid{
+.valid.btn-contact{
     @apply bg-green-500 border-green-500 hover:bg-green-500 hover:text-white hover:border-green-500
 }
+
+.bg-pill::after{
+    @apply content-[""] absolute top-1/4 bottom-0 right-0 h-48 w-1/2 bg-blue-300 -z-50 rounded-tl-full rounded-bl-full;
+}
+@screen md{
+
+.bg-pill::after{
+    @apply top-[30%] h-72 w-1/3
+    }
+}
+.features.bg-pill::after{
+    @apply -scale-x-100 left-0 top-[53%]
+}
+@screen md{
+    .features.bg-pill::after{
+        @apply top-[60%]
+        }
+    }
 /* * {
     outline: 1px solid red;
 } */

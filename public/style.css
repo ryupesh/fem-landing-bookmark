@@ -1125,20 +1125,56 @@ div[data-accordion-panel]{
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.btn-contact.valid {
+.valid.btn-contact {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.btn-contact.valid:hover {
+.valid.btn-contact:hover {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.bg-pill::after {
+  position: absolute;
+  top: 25%;
+  bottom: 0px;
+  right: 0px;
+  z-index: -50;
+  height: 12rem;
+  width: 50%;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  background-color: var(--clr-primary-300);
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+@media (min-width: 768px){
+  .bg-pill::after {
+    top: 30%;
+    height: 18rem;
+    width: 33.333333%;
+  }
+}
+
+.features.bg-pill::after {
+  left: 0px;
+  top: 53%;
+  --tw-scale-x: -1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px){
+  .features.bg-pill::after {
+    top: 60%;
+  }
 }
 
 /* * {
