@@ -9,10 +9,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-custom {
-    @apply w-wrapper mx-auto px-8;
-}
-
 .btn {
     @apply py-3 px-5 rounded-lg font-medium text-sm border-2 shadow-md
 }
@@ -23,45 +19,23 @@
     @apply bg-blue-800 fixed h-screen w-screen opacity-95
 }
 
-ul[data-tab-list] .active {
-    @apply after:absolute after:left-1/3 after:right-1/3 md:after:left-0 md:after:right-0 after:bottom-0 after:h-1 after:bg-red-500 after:rounded
+.active-tab::after {
+    @apply absolute left-1/3 right-1/3 md:left-0 md:right-0 bottom-0 h-1 bg-red-500 rounded
 }
 
-.arrow-rotate-0 {
-    @apply after:rotate-0
-}
 
-.arrow-rotate-180 {
-    @apply after:rotate-180
-}
-
-div[data-accordion-panel]{
-    transition:max-height 400ms ease;
-}
-.btn-contact{
-    @apply bg-red-500 border-red-500 hover:bg-white hover:text-red-500 hover:border-red-500
-}
-.valid.btn-contact{
-    @apply bg-green-500 border-green-500 hover:bg-green-500 hover:text-white hover:border-green-500
-}
-
+/* for blue pill shaped backgrounds */
 .bg-pill::after{
     @apply content-[""] absolute top-1/4 bottom-0 right-0 h-48 w-1/2 bg-blue-300 -z-50 rounded-tl-full rounded-bl-full;
-}
-@screen md{
-
-.bg-pill::after{
-    @apply top-[30%] h-72 w-1/3
-    }
 }
 .features.bg-pill::after{
     @apply -scale-x-100 left-0 top-[53%]
 }
 @screen md{
+    .bg-pill::after{
+        @apply top-[30%] h-72 w-1/3
+        }
     .features.bg-pill::after{
         @apply top-[60%]
         }
-    }
-/* * {
-    outline: 1px solid red;
-} */
+}

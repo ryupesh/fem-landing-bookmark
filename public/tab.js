@@ -6,16 +6,15 @@ const switchTabs = function () {
   const panels = Array.from(panelList.children);
 
   tabList.addEventListener("click", (ev) => {
-    //hide all tabs/panels and later only active-tab/panel visible
-    tabs.forEach((tab) => tab.classList.remove("active"));
+    //hide all tabs and panels
+    tabs.forEach((tab) => tab.classList.remove("active-tab"));
     panels.forEach((panel) => panel.classList.add("hidden"));
 
     if (ev.target.tagName === "LI") {
-      ev.target.classList.add("active"); //make clicked tab active
+      ev.target.classList.add("active-tab"); //make clicked tab active
 
-      // if (clicked tab == tab from tabs) => make Panel[tab-index] visible
       tabs.forEach((tab, i) => {
-        if (ev.target.isEqualNode(tab)) panels[i].classList.remove("hidden");
+        if (ev.target.isEqualNode(tab)) panels[i].classList.remove("hidden"); //make Panel visible for current tab
       });
     }
   });
@@ -23,9 +22,9 @@ const switchTabs = function () {
 
 /*
 ! HTML structure
-* ul['data-tab-list'] > li*3 and li[0].active
+* ul['data-tab-list'] > li*3 and li[0].active-tab
 * div['data-panel-list'] > div*3 and div[not(0)].hidden
 
 ! CSS classes needed
-* ul[data-tab-list].active { active-tab-styles }
+* ul[data-tab-list].active-tab { active-tab-styles }
 */
