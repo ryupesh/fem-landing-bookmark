@@ -2,8 +2,8 @@ const switchTabs = function () {
   const tabList = document.querySelector("[data-tab-list]");
   const panelList = document.querySelector("[data-panel-list]");
 
-  const tabs = Array.from(tabList.children);
-  const panels = Array.from(panelList.children);
+  const tabs = [...tabList.children];
+  const panels = [...panelList.children];
 
   tabList.addEventListener("click", (ev) => {
     //hide all tabs and panels
